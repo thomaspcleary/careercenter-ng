@@ -1,0 +1,102 @@
+<section class="below-fh">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 stack-space-lg job-list">
+        <ol class="row breadcrumb" style="background: none; margin-bottom: 0;">
+          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Job Search</a></li>
+          <li class="active">Content Project Manager</li>
+        </ol>
+        <div class="row clearfix">
+
+          <div id="apply-to-job" class="col-md-9 col-sm-9  col-xs-12" >
+            <h2>Manage My Resume</h2>
+            <div class="panel panel-primary">
+
+              <div class="panel-body" style="background: white;">
+                <span class="required pull-right tight">* required</span>
+                <form>
+                  <label for="fname">First Name <span class="required">*</span></label>
+                  <input id="fname" type="text" class="form-control form-group required">
+
+                  <label for="lname">Last Name <span class="required">*</span></label>
+                  <input id="lname" type="text" class="form-control form-group">
+
+                  <label for="phone">Phone Number <span class="required">*</span></label>
+                  <input id="phone" type="number" class="form-control form-group" placeholder="XXX-XXX-XXXX">
+
+                  <label for="email">Email Address <span class="required">*</span></label>
+                  <input id="email" type="number" class="form-control form-group" placeholder="someone@company.com">
+
+                  <label for="cover">Cover Letter <span class="normal">(Optional)</span></label>
+                  <input id="cover" type="file" class="form-control">
+                  <p class="small">(Will accept doc, docx, or PDFs.)</p>
+                  <label for="pasted-cover" class="control-label">OR<br>Write/Paste Your Cover Letter Below <span class="normal">(Optional)</span></label>
+                  <textarea id="pasted-cover" class="form-control form-group" rows="3" placeholder="Copy and Paste your cover letter here."></textarea>
+
+                  <label for="resume">Upload Resume <span class="required">*</span></label>
+                  <input id="resume" type="file" class="form-control">
+                  <p class="small">(Will accept doc, docx, or PDFs.)</p>
+                  <label for="pasted-resume" class="control-label">OR<br>Write/Paste Your Resume Below</label>
+                  <textarea id="pasted-resume" class="form-control form-group stack-space-lg" rows="3" placeholder="Copy and paste your resume here."></textarea>
+
+
+                  <div class="row">
+                    <div class="col-sm-6 col-xs-12 form-group">
+                      <button role="button" type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#signUpSaveModal">Submit</button>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 form-group">
+                      <button role="button" type="reset" class="btn btn-default btn-block">Clear</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <!-- signUpSaveModal -->
+          <div class="modal fade" id="signUpSaveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background: #0969d8; color: white;">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 1; background: black; border-radius: 14px; border: 1px; line-height: 1; padding: 0 2px;"><span aria-hidden="true"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></span></button>
+                  <h4 class="modal-title" id="signUpSaveModalLabel">Register for a Free Account to Save Your Information</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Enter in your desired User ID and Password below to register for the SRA Career Center for <em style="margin-right: 3px;">Rapid Applying</em> to all future jobs posted.</p>
+                  <p class="stack-space-lg">Registering today will save all of the information you just entered to your profile.</p>
+
+
+                  <div class="form-group">
+                    <label class="control-label" for="desired-userid">Enter Desired User ID</label>
+                    <input type="text" class="form-control" id="desired-userid" />
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="desired-userid">Enter Desired Password</label>
+                    <input type="password" class="form-control" id="desired-password" />
+                    <span class="help-block"><em>Password must contain 8-20 characters, 1 letter, 1 number and no special characters</em></span>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="confirm-password">Confirm Desired Password</label>
+                    <input type="password" class="form-control" id="confirm-password" />
+                  </div>
+                </div>
+                <div class="clearfix" style="padding: 15px;">
+                  <button type="button" class="btn btn-success">Complete Registration and Apply</button>
+
+                  <button type="button" class="btn btn-primary pull-right">Skip Registration; just apply </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

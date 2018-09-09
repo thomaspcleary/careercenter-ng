@@ -1,0 +1,220 @@
+<!-- Bootstrap core CSS -->
+<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+<!-- Custom styles for this template -->
+<link href="./assets/css/styles.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<section class="below-fh">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 stack-space-lg job-list">
+        <ol class="row breadcrumb" style="background: none; margin-bottom: 0;">
+          <li><a href="#">Home</a></li>
+          <li>Job Search</li>
+        </ol>
+        <div class="row clearfix">
+          <div class="col-sm-6 col-sm-push-6" style="padding-top: 20px;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search by keyword">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">GO</button>
+              </span>
+            </div><!-- /input-group -->
+            <a href="#" role="button" onClick="$('#filter-options').slideToggle();">Advanced Search</a>
+
+            <!-- ### FILTER OPTIONS ### -->
+            <div id="filter-options" class="clearfix" style="display: none;">
+
+              <button class="close" onClick="$('#filter-options').slideToggle();"><span class="glyphicon glyphicon-remove-sign" style="color: #000 !important;" ></span></button>
+
+              <ul style="padding-left: 0; list-style-type: none; float: left; margin-right: 15px;">
+                <li><strong>Industries</strong>
+                  <ul style="padding-left: 10px; list-style-type: none; margin-top: 5px;">
+                    <li><label for="all-indy" class="normal"><input type="checkbox" id="all-indy" /> SELECT ALL</label></li>
+                    <li><label for="college" class="normal"><input type="checkbox" id="college" /> College/University</label></li>
+                    <li><label for="hospital" class="normal"><input type="checkbox" id="hospital" /> Hospital</label></li>
+                    <li><label for="non-profit" class="normal"><input type="checkbox" id="non-profit" /> Non-Profit</label></li>
+                    <li><label for="commercial" class="normal"><input type="checkbox" id="commercial" /> Commercial</label></li>
+                    <li><label for="govt" class="normal"><input type="checkbox" id="govt" /> Government</label></li>
+                    <li><label for="legal" class="normal"><input type="checkbox" id="legal" /> Legal</label></li>
+                    <li><label for="other" class="normal"><input type="checkbox" id="other"/> Other</label></li>
+
+                  </ul>
+                </li>
+              </ul>
+              <ul style="padding-left: 0; list-style-type: none; float: left; margin-right: 15px;">
+                <li><strong>Categories</strong>
+                  <ul style="padding-left: 10px; list-style-type: none; margin-top: 5px;">
+                    <li><label for="all-cat" class="normal"><input type="checkbox" id="all-cat" /> Administrator or Administrative</label></li>
+                    <li><label for="admin" class="normal"><input type="checkbox" id="admin" /> Administrator or Administrative</label></li>
+                    <li><label for="business-manager" class="normal"><input type="checkbox" id="business-manager" /> Business Manager</label></li>
+                    <li><label for="compliance" class="normal"><input type="checkbox" id="compliance" /> Compliance</label></li>
+                    <li><label for="dept-admin" class="normal"><input type="checkbox" id="dept-admin" /> Department Administrator</label></li>
+                    <li><label for="fn-ops" class="normal"><input type="checkbox" id="fn-ops" /> Finance, Operations</label></li>
+                    <li><label for="government" class="normal"><input type="checkbox" id="government" /> Government</label></li>
+                    <li><label for="grants" class="normal"><input type="checkbox" id="grants"/> Grants and Contracts</label></li>
+                    <li><label for="irb" class="normal"><input type="checkbox" id="irb"/> Institutional Review Board</label></li>
+                    <li><label for="other-categ" class="normal"><input type="checkbox" id="other-categ"/> Other</label></li>
+                    <li><label for="president" class="normal"><input type="checkbox" id="president"/> President, CEO, Executive Director</label></li>
+                    <li><label for="ra-mgr" class="normal"><input type="checkbox" id="ra-mgr"/> Research Administrator/Manager</label></li>
+                    <li><label for="spon-proj" class="normal"><input type="checkbox" id="spon-proj"/> Sponsored Projects/Programs</label></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul style="padding-left: 0; list-style-type: none; float: left; margin-right: 15px;">
+                <li><strong>Job Types</strong>
+                  <ul style="padding-left: 10px; list-style-type: none; margin-top: 5px;">
+                    <li><label for="ft" class="normal"><input type="checkbox" id="ft" /> Full Time</label></li>
+                    <li><label for="pt" class="normal"><input type="checkbox" id="pt" /> Part Time</label></li>
+                    <li><label for="contract" class="normal"><input type="checkbox" id="contract" /> Contract</label></li>
+                    <li><label for="temp-perm" class="normal"><input type="checkbox" id="temp-perm" /> Temp to Perm</label></li>
+                    <li><label for="internship" class="normal"><input type="checkbox" id="internship" /> Internship</label></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul style="padding-left: 0; list-style-type: none; float: left; margin-right: 15px;">
+                <li><strong>Education</strong>
+                  <ul style="padding-left: 10px; list-style-type: none; margin-top: 5px;">
+                    <li><label for="edu-all" class="normal"><input type="checkbox" id="edu-all" /> Select All</label></li>
+                    <li><label for="hs" class="normal"><input type="checkbox" id="hs" /> High School</label></li>
+                    <li><label for="some-college" class="normal"><input type="checkbox" id="some-college" /> Some College</label></li>
+                    <li><label for="two-yr" class="normal"><input type="checkbox" id="two-yr" /> 2-Year Degree</label></li>
+                    <li><label for="four-year" class="normal"><input type="checkbox" id="four-year" /> 4-Year Degree</label></li>
+                    <li><label for="masters" class="normal"><input type="checkbox" id="masters" /> Masters</label></li>
+                    <li><label for="doctorate" class="normal"><input type="checkbox" id="doctorate" /> Doctorate</label></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- ### END FILTER OPTIONS ### -->
+
+          </div><!-- /.col-lg-6 -->
+
+          <div class="col-sm-6 col-sm-pull-6 col-xs-12">
+            <h2 style="margin-bottom: 0">Current Opportunities </h2>
+            <p class="lead pull-left" style="font-weight: 400;">Showing <strong>30</strong> jobs
+              from last 90 days </p>
+            </div>
+
+
+
+
+            <div class="col-xs-12 alert alert-info clearfix hidden">
+              <p id="filter-results" style="color: #000;"> <strong>FILTERED RESULTS BY:</strong> <button class="btn btn-default">Option 1 <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button> <button class="btn btn-default">Option 2 <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></button></p>
+
+
+            </div>
+
+            <div id="job-spotlight" class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-xs-12">
+              <div class="panel panel-primary">
+                <div class="panel-heading" style="background: #253D68"><span class="glyphicon glyphicon-flag" aria-hidden="true"></span> Job Spotlight</div>
+                <div class="panel-body">
+                  <h3 style="margin-top: 0;"><a href="jobs-software-engineer.html">Content Project Manager</a></h3>
+                  <p class="date-loc clearfix"><span class="date-loc" ><em><strong>SRA International</strong> - Hunt Valley, MD</em></span></p>
+                  <p>SRA International is looking for a part-time project manager for the Education and Professional Development Micro-Accreditation Task Force.</p>
+                  <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="search-results" class="col-md-9 col-md-pull-3 col-sm-8 col-sm-pull-4 col-xs-12">
+              <div class="job">
+                <h3><a href="cpm.html">Content Project Manager</a></h3>
+                <p class="tight">
+                  <span class="date-loc col-sm-6 row "><strong>SRA International</strong> - Hunt Valley, MD</span> <span style="margin-right: 15px;">  </span>
+                  <span class="date-loc pull-right">Posted 11 Days ago </span></p>
+                  <p>SRA International is looking for a part-time project manager for the Education and Professional Development Micro-Accreditation Task Force.</p>
+                  <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                </div>
+
+                <div class="job">
+
+                  <h3>
+                    <a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13731">Research Compliance Officer</a></h3>
+                    <p class="tight"><strong>University of Nevada Reno</strong> -Reno, NV <span class="date-loc pull-right">Posted 11 days ago</span></p>
+
+                    <p>The University of Nevada, Reno Research Integrity Office is recruiting for a Research Compliance Officer. </p>
+                    <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+
+                  </div>
+
+                  <div class="job">
+
+
+                    <h3><a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13730">Associate Vice President for Research</a></h3>
+                    <p class="tight"><strong>University of Wyoming</strong> - Laramie, WY <span class="pull-right">Posted 12 days ago</span>
+
+                    </p>
+                    <p>Provides primary support to the Vice President for Research and Economic Development for the administrative oversight of all contract and grant pre-award, award set-up and post-award research administration.  </p>
+                    <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+
+                  </div>
+
+
+                  <div class="job">
+
+                    <h3><a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13729">Director, Technology Transfer and Research Products Center</a></h3>
+                    <p class="tight"><strong>University of Wyoming</strong> - Laramie, WY
+                      <span class="pull-right">Posted
+                        12 days ago</span>
+                      </p>
+                      <p>The University of Wyoming (UW) is seeking an innovative, energetic and experienced individual to serve as Director of the Office of Technology Transfer and Research Products Center (WY-TTRPC).</p>
+                      <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                    </div>
+
+                    <div class="job">
+                      <h3><a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13728">Grant Officer</a></h3>
+                      <p><strong>Salt Lake Community College</strong> -
+                        Salt Lake City, UT <span class="pull-right">
+                          Posted 17 days ago</span>
+                        </p>
+
+                        <p>The Office of Sponsored Projects inspires superior grant practice by developing and maintaining a robust grant administration infrastructure, and providing exceptional service and leadership in the pursuit and management of scholarly grant-related activities at Salt Lake Community College. </p>
+                        <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                      </div>
+
+
+                      <div class="job featured-job" style="background-color: #f9f9f9; border: 2px solid #ff8100; padding: 10px;">
+                        <p style="color:#ff8100; margin-bottom: 0;"><i class="fa fa-star-o"></i> <strong>Featured Job </strong><i class="fa fa-star-o"></i></p>
+                        <h3> <a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13727">Content Project Manager </a></h3>
+
+                        <p><strong>SRA International</strong> - Arlington, VA
+                          <span class="pull-right">
+                            Posted 17 days ago</span>
+                          </p>
+                          <p>SRA International is looking for a part-time project manager for the Education and Professional Development Micro-Accreditation Task Force.</p>
+                          <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                        </div>
+
+                        <div class="job">
+                          <h3><a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13726">Director of Administrative and Research Systems</a></h3>
+                          <p><strong>Stony Brook University</strong> -
+                            Stony Brook, NY <span class="pull-right">
+                              Posted 18 days ago</span>
+                            </p>
+
+                            <p>Preferred Qualifications: Advanced degree. Knowledge of research administration. Experience with IT solutions in a research or university environment. </p>
+                            <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                          </div>
+
+                          <div class="job">
+                            <h3><a href="index.cfm?fuseaction=jobs.viewJobDetail&amp;jobId=13724">Senior Grants Administrator - Morgridge College Of Education</a></h3>
+                            <p><strong>University of Denver</strong> -
+                              Denver, CO <span class="pull-right">
+                                Posted 19 days ago</span>
+                              </p>
+
+                              <p>Position Summary The role of the Senior Grants Administrator is to support to the college in the development and management of grants, gifts, and contracts.  </p>
+                              <p><a href="#">Read More <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a> </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>

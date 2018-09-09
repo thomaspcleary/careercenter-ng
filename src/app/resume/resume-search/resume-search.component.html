@@ -1,0 +1,218 @@
+<!-- Bootstrap core CSS -->
+<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap theme -->
+<link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet">
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+<!-- Custom styles for this template -->
+<link href="./assets/css/styles.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<section class="no-subnav">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 stack-space-lg">
+        <ol class="row breadcrumb" style="background: none; margin-bottom: 0;">
+          <li><a href="employers.html">Overview</a></li>
+          <li>Resume Search</li>
+        </ol>
+        <h1>Search SRA Resumes</h1>
+
+        <div class="col-sm-9">
+          <div style="border: 1px solid #FF9900; padding: 15px; margin: 0 -15px;">
+            <form action="#">
+              <div class="form-group form-horizontal clearfix">
+                <label class="col-sm-4 control-label">Keywords: </label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" placeholder="Search by..." value="Director" />
+                </div>
+              </div>
+              <!-- ### CONTACT INFO ### -->
+
+              <!-- ### END EVEN CONTAINER ### -->
+
+              <!-- ### JOB INFO ### -->
+
+              <!-- ### BACKGROUND INFO ### -->
+              <div class="even-container" style="margin-bottom: 15px">
+                <h3 class="stack-space">Background Information</h3>
+                <div class="form-group form-horizontal clearfix">
+                  <label class="col-sm-4 control-label" for="exp-years">Desired Years of Experience:</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="exp-years" />
+                    <span class="help-block"><em>Enter in a digit or date range</em></span>
+                  </div>
+                </div>
+
+                <div class="form-group form-horizontal clearfix">
+                  <label class="col-sm-4 control-label" for="work-auth">Security Clearance:</label>
+                  <div class="col-sm-8">
+                    <label class="control-label normal" for="no-clearance" style="margin-right: 10px;"><input type="radio" name="clearance" id="no-clearance"> None</label>
+                    <label class="control-label normal" for="no-clearance"><input type="radio" name="clearance" id="active-clearance"> Active</label>
+                  </div>
+                </div>
+
+                <div class="form-group form-horizontal clearfix">
+                  <label class="col-sm-4 control-label" for="exp-years">Select the desired options from each category below that this job would apply:</label>
+                  <div class="col-sm-8">
+
+                    <label class="control-label clearfix" for="industries">Industries</label>
+                    <select id="industries" class="form-control" multiple="multiple">
+                      <option value="college">College/University</option>
+                      <option value="hospital">Hospital</option>
+                      <option value="non-profit">Non-Profit</option>
+                      <option value="commercial">Commercial</option>
+                      <option value="govt">Government</option>
+                      <option value="legal">Legal</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label class="control-label" for="categories">Categories</label>
+                    <select id="categories" multiple="multiple">
+                      <option value="all-cat">Administrator or Administrative</option>
+                      <option value="admin">Administrator or Administrative</option>
+                      <option value="business-manager">Business Manager</option>
+                      <option value="compliance">Compliance</option>
+                      <option value="dept-admin">Department Administrator</option>
+                      <option value="fn-ops">Finance, Operations</option>
+                      <option value="government">Government</option>
+                      <option value="grants">Grants and Contracts</option>
+                      <option value="irb">Institutional Review Board</option>
+                      <option value="other-categ">Other</option>
+                      <option value="president">President, CEO, Executive Director</option>
+                      <option value="ra-mgr">Research Administrator/Manager</option>
+                      <option value="spon-proj">Sponsored Projects/Programs</option>
+                    </select>
+                    <label class="control-label" for="job-types">Job Types</label>
+                    <select id="job-types" multiple="multiple">
+                      <option value="ft">Full Time</option>
+                      <option value="pt">Part Time</option>
+                      <option value="contract">Contract</option>
+                      <option value="temp-perm">Temp to Perm</option>
+                      <option value="internship">Internship</option>
+                    </select>
+                    <label class="control-label" for="education">Education</label>
+                    <select id="education" multiple="multiple">
+                      <option value="hs">High School</option>
+                      <option value="some-college">Some College</option>
+                      <option value="two-yr">2-Year Degree</option>
+                      <option value="four-year">4-Year Degree</option>
+                      <option value="masters">Masters</option>
+                      <option value="doctorate">Doctorate</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ### BUTTONS  ### -->
+              <div class="row clearfix">
+                <div class="col-sm-4 col-sm-push-4 form-group">
+                  <button type="button" class="btn btn-primary btn-block text-left" onClick="$('#resumes').show();"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div id="resumes" style="display: none;">
+            <div class="clearfix">
+              <h2 class="pull-left">Resume Search Results</h2>
+              <div class="col-sm-4 row pull-right">
+                <select class="form-control btn btn-default" style="margin-top: 20px; border: 1px solid #3370cc;">
+                  <option value="90days">Posted within last 90 Days</option>
+                  <option value="120days" selected>Posted within last 120 Days</option>
+                </select>
+              </div>
+            </div>
+            <form name="searchResults" action="index.cfm?fuseaction=resumeSearch.saveSelectedResumes" method="post">
+              <input type="hidden" name="CurrFuseAction" value="resumeSearch.search">
+              <input type="hidden" name="countOfItems" value="">
+              <input type="hidden" name="selectedList" value="">
+
+              <ul class="search-results-list">
+                <li>
+                  <input type="checkbox" value="3162" name="ResumeID" style="float:right">
+                  <a href="#" data-toggle="modal" data-target="#resumeModal">
+                    <h4 style="margin-bottom: 0px;">
+                      <div style="color:#1475a4">
+                        Mario Carranza
+                      </div>
+                    </h4>
+                    Mario Carranza
+                    <div style="color:#888">
+                      18 days ago
+                    </div>
+                  </a>
+                  <hr>
+                </li>
+
+                <li>
+                  <input type="checkbox" value="3159" name="ResumeID" style="float:right">
+                  <a href="index.cfm?fuseaction=resumes.viewResumeDetailPopup&amp;ResumeID=3159">
+                    <h4 style="margin-bottom: 0px;">
+                      <div style="color:#1475a4">
+                        Grants and Contracts Experience
+                      </div>
+                    </h4>
+                    Jonathan Moreno
+                    <div style="color:#888">
+                      70 days ago
+                    </div>
+                  </a>
+                  <hr>
+                </li>
+
+                <li>
+                  <input type="checkbox" value="3157" name="ResumeID" style="float:right">
+                  <a href="index.cfm?fuseaction=resumes.viewResumeDetailPopup&amp;ResumeID=3157">
+                    <h4 style="margin-bottom: 0px;">
+                      <div style="color:#1475a4">
+                        Grants &amp; Contracts Manager
+                      </div>
+                    </h4>
+                    Courtney Miller
+                    <div style="color:#888">
+                      114 days ago
+                    </div>
+                  </a>
+                  <hr>
+                </li>
+
+                <li>
+                  <input type="checkbox" value="3155" name="ResumeID" style="float:right">
+                  <a href="index.cfm?fuseaction=resumes.viewResumeDetailPopup&amp;ResumeID=3155">
+                    <h4 style="margin-bottom: 0px;">
+                      <div style="color:#1475a4">
+                        Experienced Research Administrator in an Academic Health Sciences Setting
+                      </div>
+                    </h4>
+                    Rebecca Nickleson
+                    <div style="color:#888">
+                      120 days ago
+                    </div>
+                  </a>
+                  <hr>
+                </li>
+              </ul>
+
+              <div >
+                <button class="but_search btn btn-success btn-block" onclick="javascript: return confirmJobIDS(document.searchResults,document.searchResults.JobID);"><i class="fa fa-save"></i> Save Selected Resumes</button>
+              </div>
+            </form>
+          </div>
+          <!-- ### END RESUMES ### -->
+        </div>
+
+        <div class="col-sm-3">
+          <div class="well stack-space text-center" style="background: #ffc; height: 200px">
+            Placeholder for Ad Space
+          </div>
+
+          <div class="well stack-space-lg text-center" style="background: azure; height: 200px">
+            Placeholder for Ad Space
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

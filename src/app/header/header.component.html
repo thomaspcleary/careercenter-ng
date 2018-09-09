@@ -1,0 +1,73 @@
+<link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="./assets/css/bootstrap-theme.min.css" rel="stylesheet">
+
+<link href="./assets/css/styles.css" rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="top_section clearfix hidden" style="background: #f7f7f7; ">
+      <div class="container">
+        <ul style="list-style: none;">
+          <li style="display: inline-block"><a href="https://www.facebook.com/SocResAdminINTL"><i class="fa fa-facebook"></i></a></li>
+          <li style="display: inline-block"><a href="https://twitter.com/SocietyRAIntl"><i class="fa fa-twitter"></i></a></li>
+          <li style="display: inline-block"><a href="http://www.linkedin.com/groups?gid=1959806&amp;mostPopular="><i class="fa fa-linkedin"></i></a></li>
+          <li style="display: inline-block; color: #ccc;">|</li>
+          <li style="display: inline-block"><a href="http://www.srainternational.org">www.srainternational.org</a></li>
+          <li style="display: inline-block; color: #ccc;">|</li>
+          <li style="display: inline-block"><a href="index.cfm?fuseaction=careerCenter.viewLogin">Career Center Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html">
+        <img src="./assets/img/sra-logo-only-sm.jpg" width="166" height="20" alt="SRA International Career Center Logo"/>
+        <h1 style="margin-top: 0; color: #253D68; font-size: 30px;">Career Center</h1></a>
+        <!-- ### SIGN IN ### -->
+        <div class="dropdown visible-xs" style="float: right; right: 15px;">
+          <button class="dropdown-toggle" type="button" id="signinMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="width: 60px; display: inline-block"> <img src="img/account-profile.svg" alt="Sign In" style="width: 34px; margin-top: 6px"/> <span class="caret" style="position: absolute; bottom: 10px;"></span> </button>
+          <ul class="menu-dropdown dropdown-menu" aria-labelledby="signinMenu">
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">New? Sign up!</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="navbar" class="navbar-collapse navbar-right collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown"> <a (click)="onSeekerToggleMenu()" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Seekers <span class="caret"></span></a>
+            <ul class="dropdown-menu" [ngClass]="{ 'dropdown-menu open' : toggleSeekerMenu === true }">
+              <li><a routerLink="/seekers-overview">Overview</a></li>
+              <li><a routerLink="/job-search">Job Search</a></li>
+              <li><a routerLink="/view-resume-form">Manage Resume</a></li>
+              <li><a routerLink="/saved-searches">Saved Searches</a></li>
+              <li><a routerLink="/saved-jobs">Saved Jobs</a></li>
+              <li><a routerLink="/job-applications">Job Applications</a></li>
+              <li><a routerLink="">Account Profile</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a (click)="onEmployerToggleMenu()" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Employers <span class="caret"></span></a>
+            <ul class="dropdown-menu" [ngClass]="{ 'dropdown-menu open' : toggleEmployerMenu === true }">
+              <li><a routerLink="/employer-overview">Overview</a></li>
+              <li><a routerLink="">Post Jobs</a></li>
+              <li><a routerLink="/resume-search">Resume Search</a></li>
+              <li><a routerLink="/saved-resume-search">Saved Searches</a></li>
+              <li><a routerLink="/saved-resumes">Saved Resumes</a></li>
+              <li><a routerLink="">Job Posting Reports</a></li>
+              <li><a routerLink="#">Account Profile</a></li>
+            </ul>
+          </li>
+          <li class="active"><a routerLink="/pricing">Pricing</a></li>
+
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/view-job-detail">Job Detail</a></li>
+          <li style="border-left: 1px solid #333;"><a href="#">Career Center Log In</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
